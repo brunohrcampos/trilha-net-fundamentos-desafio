@@ -21,7 +21,7 @@ namespace DesafioFundamentos.Models
             string placa = Console.ReadLine();
             
             // Verifica se a variável placa é válida (Não é nula,vazia ou apenas espaços em brancos)
-            if(!string.IsNullOrWhiteSpace(placa)){
+            if(!string.IsNullOrWhiteSpace(placa) && !veiculos.Contains(placa)){
 
                 //adiciona a placa a lista e emite uma mensagem de veículo estacionado.
                 veiculos.Add(placa);
@@ -29,7 +29,7 @@ namespace DesafioFundamentos.Models
                 
             }
             else{
-                Console.WriteLine (" Placa Inválida, tente novamente");
+                Console.WriteLine ("Veículo já se encontra estacionado ou a placa digitada é inválida! Tente novamente.");
             }
 
             }
